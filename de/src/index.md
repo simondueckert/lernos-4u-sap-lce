@@ -1,6 +1,6 @@
 # Vorwort
 
-Hinweis: Das ist die [SAP Learning Circle Edition](https://events.sap.com/de/learning-circle-experience/de/home) des lernOS für Dich Leitfadens. Im Unterschied zum vollständigen [lernOS für Dich Leitfaden](https://cogneon.github.io/lernos-for-you/de/) enthält diese nur den Lernpfad "Produktivität und Stressfreiheit" (GTD-Lernpfad).
+*Hinweis: Das ist die [SAP Learning Circle Edition](https://events.sap.com/de/learning-circle-experience/de/home) des lernOS für Dich Leitfadens. Im Unterschied zum vollständigen [lernOS für Dich Leitfaden](https://cogneon.github.io/lernos-for-you/de/) enthält diese nur den Lernpfad "Produktivität und Stressfreiheit" (GTD-Lernpfad).*
 
 Wofür gibt es den **lernOS für Dich Leitfaden**? Wir stehen vor enormen Herausforderungen, die durch Globalisierung, Digitalisierung sowie schnelle technologische und wissenschaftliche Entwicklung angetrieben werden. Gleichzeitig bieten uns diese Veränderungen viele neue Entwicklungsmöglichkeiten. Die Zukunft ist ungewiss und wir können Sie nicht vorhersagen.
 

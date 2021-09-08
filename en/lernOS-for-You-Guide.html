@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Simon Dückert" />
+  <title>lernOS for You Guide</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">lernOS for You Guide</h1>
+<p class="subtitle">SAP Learning Circle Experience Edition</p>
+<p class="author">Simon Dückert</p>
+<p class="date">Version 2.0 (08.09.2021)</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#preface">Preface</a></li>
+<li><a href="#about-lernos">About lernOS</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#lifelong-learning-and-knowledge-work">Lifelong learning and Knowledge Work</a>
+<ul>
+<li><a href="#lifelong-learning">Lifelong learning</a></li>
+<li><a href="#knowledge-work">Knowledge Work</a></li>
+<li><a href="#productivity-of-knowledge-work">Productivity of Knowledge Work</a></li>
+</ul></li>
+<li><a href="#lernos-canvas---overview-of-knowledge-and-learning-needs">lernOS Canvas - Overview of Knowledge and Learning Needs</a></li>
+<li><a href="#lernos-flow---workflow-for-modern-working-and-learning">lernOS Flow - Workflow for Modern Working and Learning</a></li>
+<li><a href="#lernos-workplace---your-learning-environment-and-knowledge-workplace">lernOS Workplace - Your Learning Environment and Knowledge Workplace</a></li>
+<li><a href="#lernos-memex---the-2nd-brain-of-the-learners">lernOS Memex - The “2nd Brain” Of The Learners</a></li>
+</ul></li>
+<li><a href="#learning-paths">Learning Paths</a>
+<ul>
+<li><a href="#learning-path-productivity-stress-free">Learning Path Productivity &amp; Stress-Free</a>
+<ul>
+<li><a href="#top-10-sources-on-gtd-kata">Top 10 Sources on GTD (Kata)</a></li>
+<li><a href="#gathering-stuff-and-sweeping-the-mind-kata">Gathering Stuff and Sweeping the Mind (Kata)</a></li>
+<li><a href="#set-up-your-gtd-environment-kata">Set Up Your GTD Environment (Kata)</a></li>
+<li><a href="#which-inboxes-do-you-want-to-use-kata">Which Inbox(es) Do You Want To Use? (Kata)</a></li>
+<li><a href="#what-lists-do-you-want-to-create-and-maintain-kata">What Lists Do You Want To Create And Maintain? (Kata)</a></li>
+<li><a href="#inbox-zero-in-4-steps-kata">Inbox Zero in 4 Steps (Kata)</a></li>
+<li><a href="#set-up-your-project-environment-kata">Set Up Your Project Environment (Kata)</a></li>
+<li><a href="#create-your-reference-repository-kata">Create Your Reference Repository (Kata)</a></li>
+<li><a href="#make-a-weekly-review-kata">Make a Weekly Review (Kata)</a></li>
+<li><a href="#do-a-daily-review-kata">Do A Daily Review (Kata)</a></li>
+<li><a href="#the-6-focus-horizons-of-getting-things-done-kata">The 6 Focus Horizons Of Getting Things Done (Kata)</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#appendix">Appendix</a>
+<ul>
+<li><a href="#circle-facilitation-checklist">Circle Facilitation Checklist</a></li>
+<li><a href="#lernos-flow---microsoft-365-edition">lernOS Flow - Microsoft 365 Edition</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+<li><a href="#change-history.">Change history.</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="preface">Preface</h1>
+<p><em>Note: This is the <a href="https://events.sap.com/de/learning-circle-experience/de/home">SAP Learning Circle Edition</a> of the lernOS for You guide. Unlike the full <a href="https://cogneon.github.io/lernos-for-you/en/">lernOS for You Guide</a>, this contains only the Productivity and Stress-Free (GTD) learning path.</em>.</p>
+<p>What is the <strong>learnOS for You Guide</strong> good for? We are facing enormous challenges driven by globalization, digitalization, and rapid technological and scientific development. At the same time, these changes offer us many new opportunities for development. The future is uncertain and we cannot predict it.</p>
+<p>So we need to be open and ready for it and shape it together (Source: <a href="https://www.oecd.org/education/2030">Learning Framework 2030</a>). To navigate through the so-called <a href="https://en.wikipedia.org/wiki/Volatility,_uncertainty,_complexity_and_ambiguity">VUCA</a> world of the 21st century, full of volatility, uncertainty, complexity, and ambiguity, teens, students, professionals, managers, and leaders must constantly evolve. Everyone needs to learn skills such as creativity, critical thinking, communication, and collaboration. Digital literacy is the competence to read, write, and participate in collaborative activities using digital tools. It is important to be able to use digital tools productively.</p>
+<p>The motivation for personal development should be more than getting a well-paying job or making a profit. Everyone should care about their own well-being, but also the well-being of their friends and family, their communities and society. We need to learn what knowledge, skills, mindsets, attitudes, values, methods and tools we need to create a better future together.</p>
+<p>lernOS can help you to get fit for the 21st century. lernOS helps you to organize your activities and to learn consciously from every action. It also encourages networking with other people so you don’t have to reinvent every wheel and repeat every mistake.</p>
+<p>Best of all, lernOS is free, open and easy to understand. Start using it today, get familiar with the basics, and go through a learning path on your own, in a learning tandem, or in a Circle!</p>
+<h1 id="about-lernos">About lernOS</h1>
+<p><strong>lernOS</strong> is an <a href="https://en.wikipedia.org/wiki/Open_system_(systems_theory)">open system</a> for <a href="https://en.wikipedia.org/wiki/Lifelong_learning">lifelong learning</a> and <a href="https://en.wikipedia.org/wiki/Learning_organization">learning organizations</a>. How lernOS works is described in <strong>guidance</strong> available in <a href="https://opendefinition.org/">open</a>. lernOS can easily be practiced as <strong>individual</strong>, in <strong>team</strong> or in the whole <strong>organization</strong>.</p>
+<p>If you are completely new to lernOS, we recommend starting together in a <strong>Circle</strong> (4-5 people) or at least in a <strong>learning tandem</strong> (2 people). A checklist for facilitating Circlen/Tandems can be found in the appendix. You can find more information on the page <a href="http://lernos.org">lernos.org</a>. You can easily find fellow participants in the <a href="https://community.cogneon.de">lernOS Community CONNECT</a>. There is also the <a href="https://community.cogneon.de/c/lernos/lernos-circlefinder/">lernOS Circlefinder</a> as a market place for Circle offers and requests.</p>
+<p><strong>KEEP CALM &amp; LEARN ON!</strong></p>
+<h1 id="introduction">Introduction</h1>
+<h2 id="lifelong-learning-and-knowledge-work">Lifelong learning and Knowledge Work</h2>
+<p>We are currently in a very dynamic transition from an industrial to a <a href="https://en.wikipedia.org/wiki/Knowledge_society">knowledge society</a>, which is characterized by rules and norms being continuously challenged through learning processes. As individuals, we can succeed in this society through learning and contribute to the well-being of all.</p>
+<h3 id="lifelong-learning">Lifelong learning</h3>
+<p>Learning is the intentional or incidental acquisition of knowledge or skills. This learning process leads to relatively stable changes in behavior, thinking, or feeling as a result of experience or new knowledge.</p>
+<p>With the <a href="https://en.wikipedia.org/wiki/Delors_Report">Delors Report</a>, a vision of lifelong learning (“learning throughout life”) was published by the European Commission in 1996. The report identifies the four pillars of lifelong learning that should be integrated into education and training:</p>
+<ul>
+<li><strong>Learning to know</strong> - a broad general knowledge with the possibility to deepen a small number of topics.</li>
+<li><strong>Learning to do</strong> - to acquire not only professional skills, but also the competence to deal with many situations and to work in teams.</li>
+<li><strong>Learning to be</strong> - to develop one’s own personality and be able to act with growing autonomy, judgment and personal responsibility.</li>
+<li><strong>Learning to live together</strong> - by developing an understanding of other people and an appreciation of interdependence.</li>
+</ul>
+<p>But there are also very practical reasons that make lifelong learning necessary for you. As you can see from the half-life of knowledge graph, some types of knowledge quickly become outdated and require constant learning. While areas such as school knowledge remain reasonably stable, the need for new learning is particularly great in the technology and IT areas.</p>
+<figure>
+<img src="./images/halflife-of-knowledge.png" alt="Half-life of knowledge (from Schüppel, J.: Wissensmanagment. Organizational learning in the area of conflict between knowledge and learning barriers, own presentation)" /><figcaption aria-hidden="true">Half-life of knowledge (from Schüppel, J.: Wissensmanagment. Organizational learning in the area of conflict between knowledge and learning barriers, own presentation)</figcaption>
+</figure>
+<p>For the citizens of a society, this means that they should continue to learn even after they have completed their education through school and university, in order not to lose touch. This learning process from birth to death is called lifelong or <a href="https://en.wikipedia.org/wiki/Lifelong_learning">lifelong learning</a>. Until the first education, parents and the state take care of learning in most cases, after that you have to practice <a href="https://en.wikipedia.org/wiki/Self-organization">self-organization</a>.</p>
+<h3 id="knowledge-work">Knowledge Work</h3>
+<p>In his book Landmarks of Tomorrow, Peter Drucker points to a change in the world of work toward knowledge-intensive work tasks, or <a href="https://en.wikipedia.org/wiki/Knowledge_worker">knowledge work</a>, as early as the late 1950s. The knowledge worker is characterized by the fact that he knows better about the work task and the necessary knowledge than the managers of the organization and therefore has to organize himself to a large extent. In contrast to <a href="https://en.wikipedia.org/wiki/Scientific_management">Scientific Management</a>, where there is a separation between headwork and manual work, both come together in the knowledge worker.</p>
+<p>The organizational sociologist Hellmut Willke defines knowledge work as activities (communications, transactions, interactions) that are characterized by the fact that the required knowledge is not acquired once in a lifetime through experience, initiation, teaching, specialized training or professionalization and then applied. Rather, knowledge work in the sense meant here requires that the relevant knowledge be</p>
+<ol type="1">
+<li>continuously revised</li>
+<li>permanently regarded as capable of improvement</li>
+<li>is principally not regarded as truth but as a resource, and</li>
+<li>is inseparably coupled with non-knowledge, so that specific risks are associated with knowledge work.</li>
+</ol>
+<p>The german study <a href="https://lit.bibb.de/vufind/Record/DS-131131">Activities and Occupational Requirements in Knowledge-Intensive Occupations</a> identified the following activities as particularly knowledge-intensive:</p>
+<ul>
+<li>Researching</li>
+<li>Developing</li>
+<li>Researching</li>
+<li>Documenting</li>
+<li>training</li>
+<li>Teaching</li>
+<li>Organizing other people’ work processes (yes, managers and executives are also knowledge workers :-)</li>
+</ul>
+<p>If your daily work consists to a large extent of one or more of these activities, you can count yourself among the knowledge workers and you belong to the core target group of this guide.</p>
+<h3 id="productivity-of-knowledge-work">Productivity of Knowledge Work</h3>
+<p><a href="https://en.wikipedia.org/wiki/Productivity">Productivity</a> is classically defined as the ratio of products produced to the factors of production required to produce them. Peter Drucker, in the book Management Challenges for the 21st Century, summarizes knowledge worker productivity in six factors:</p>
+<ol type="1">
+<li>knowledge worker productivity damands that we ask the question: <strong>What is the task?</strong></li>
+<li>It demands that we impose the <strong>responsibility for their productivity</strong> on the individual knowledge workers themselfs. Knowledge workers have to manage themselves. They have to have autonomy.</li>
+<li><strong>Continuous innovation</strong> has to be part of the work, the task, and the responsibility of knowledge workers.</li>
+<li>Knowledge work requires <strong>continuous learning</strong> on the part of the knowledge worker, but equally <strong>continuous teaching</strong>.</li>
+<li><strong>Productivity of the knowledge worker</strong> is primarily not a matter of quantity of results. Quality is at least as important.</li>
+<li>Finally, knowledge worker productivity requires that <strong>the knowledge worker is both seen and treated as an “asset”</strong> rather than “costs.” It requires that knowledge workers want to work for the organization in preference to all other opportunities.</li>
+</ol>
+<p>The importance of autonomy, continuous learning (mastery), and independently figuring out the relevant work tasks (purpose) for work in the 21st century is also pointed out by Dan Pink in the well-received TED talk <a href="https://www.youtube.com/watch?v=rrkrvAUbU9Y">On the Surprising Science of Motivation</a>.</p>
+<h2 id="lernos-canvas---overview-of-knowledge-and-learning-needs">lernOS Canvas - Overview of Knowledge and Learning Needs</h2>
+<p>A canvas is a visual structure that can be used to work on multiple areas in parallel. The idea for the lernOS Canvas originally came from Alex Osterwalder, who developed the <a href="https://en.wikipedia.org/wiki/Business_Model_Canvas">Business Model Canvas</a> for business model development.</p>
+<p>The <a href="./images/lernOS-Canvas-for-you-Canvas-en.png">lernOS Canvas</a> uses the same basic structure, but the naming of the areas has been adapted to cover the relevant topics of the lernOS workflow on an individual level. Before getting into lernOS, you should have completed the Canvas once to get an overview of your current state.</p>
+<p><strong>ProTip:</strong> To be able to work flexibly with the Canvas, you should never write directly on it. That’s what sticky notes were invented for!</p>
+<figure>
+<img src="images/lernOS-Canvas-for-you-Canvas-en.png" alt="lernOS-Canvas" /><figcaption aria-hidden="true">lernOS-Canvas</figcaption>
+</figure>
+<p>In the upper part of the Canvas you can write your name and the date of creation or last modification. If you want to work with the Canvas electronically, you can copy it to OneNote or a digital whiteboard, for example. To fill out the Canvas for the first time, you can ask yourself the following questions, for example:</p>
+<ul>
+<li><strong>Purpose:</strong> What are you living for? What do you want to accomplish in your life?</li>
+<li><strong>Objectives &amp; Key Results:</strong> What are your goals for the next 12 weeks? What are the measurable outcomes of those goals?</li>
+<li><strong>My Roles:</strong> What are your current roles? What are the resulting goals?</li>
+<li><strong>My Tasks:</strong> What are your current tasks? What are the goals that result from them?</li>
+<li><strong>My Projects:</strong> What are your current projects? What are the goals that result from them?</li>
+<li><strong>My Social Networks:</strong> What internal and external social networks (digital and analog) help you network?</li>
+<li><strong>My Learning and Working Environment:</strong> What does your learning and working environment look like (infrastructure, content, tools, methods, etc.)?</li>
+<li><strong>My Knowledge and Skills:</strong> What knowledge and skills are important to your goals, roles, tasks, and projects? What do you still need to learn?</li>
+<li><strong>My Knowledge Assets:</strong> What knowledge assets (documents, checklists, videos, etc.) do you have? Which of these can you offer to your network?</li>
+</ul>
+<h2 id="lernos-flow---workflow-for-modern-working-and-learning">lernOS Flow - Workflow for Modern Working and Learning</h2>
+<p><a href="https://en.wikipedia.org/wiki/Flow_(psychology)">Flow</a> refers to the feeling of a mental state experienced as blissful, in which you are concentrated and completely absorbed in an activity. In flow, there is a good balance between the demands of the activity and one’s own abilities, so that there is neither overload nor underload. In order to enable concentration and focus in our fast and complex world of life and work, a good self-organization system is needed.</p>
+<p>The lernOS Flow therefore relies on 13-week cycles, which are called <strong>lernOS Sprints</strong> in reference to <a href="https://scrumguides.org">Scrum</a>. Each sprint begins with planning and goal setting (week 0) and ends with a retrospective (week 12). The four quarters of a year are a good rhythm, but you can adjust this to your preference.</p>
+<figure>
+<img src="images/lernOS-Sprint.png" alt="lernOS Sprint" /><figcaption aria-hidden="true">lernOS Sprint</figcaption>
+</figure>
+<p>The lernOS Flow is a workflow that knowledge workers and lifelong learners can use for their self-organization. For this purpose, practice-proven methods and approaches are used:</p>
+<ol type="1">
+<li><strong>Objectives &amp; Key Results (OKR)</strong> for goal-oriented and focused work and learning by defining learning objectives and desired outcomes (see also <a href="https://rework.withgoogle.com/guides/set-goals-with-okrs/steps/introduction/">OKR</a> at Google). <em>Hint: not included in this version of the guide.</em></li>
+<li><strong>Getting Things Done (GTD)</strong> for productive and stress-free working and learning by structuring self-organization through a 5-step process (see also <a href="https://gettingthingsdone.com">GTD</a> by David Allen).</li>
+<li><strong>Working Out Loud (WOL)</strong> for openly sharing work results across the network and telling backstories (see also <a href="https://thebryceswrite.com/2010/11/29/when-will-we-work-out-loud-soon/">WOL Definition</a> by Bryce Williams, <a href="https://workingoutloud.com/de/fur-dich">WOL Circle Guides</a> by John Stepper). <em>Hint: not included in this version of the guide.</em></li>
+</ol>
+<p>In the diagram of the lernOS flow you can recognize the elements from the individual methods by the color marking (OKR: red, GTD: green, WOL: blue):</p>
+<p><img src="./images/lernOS-for-You-Flow.png" /></p>
+<p>The image is best read from left to right. There are two possible start points (green circles) and one end point (red circle). With the lower starting point, one is more concerned with the short-term and operational handling of knowledge and learning. The upper starting point maps the long-term and strategic perspective (see also <a href="https://gettingthingsdone.com/2011/01/the-6-horizons-of-focus/">GTD - The 6 Horizons of Focus</a>).</p>
+<p><strong>ProTip:</strong> if you work privately or professionally with Microsoft 365, you will find the Microsoft 365 edition of the lernOS flow in the appendix.</p>
+<h2 id="lernos-workplace---your-learning-environment-and-knowledge-workplace">lernOS Workplace - Your Learning Environment and Knowledge Workplace</h2>
+<p>When thinking of the modern learning and knowledge workplace, many immediately think of the “Digital Workplace” or the “Digital Classroom” with its many digital tools. Therefore, this chapter is preceded by the following quote:</p>
+<blockquote>
+<p>A fool with a tool is still a fool (Ron Weinstein)</p>
+</blockquote>
+<p>Mindset, skillset &amp; toolset instead of just toolset: When you start designing your own learning environment or your own knowledge workplace, it is much more important to take a balanced view of three areas:</p>
+<ul>
+<li><strong>Mindset</strong> - What is my mindset towards learning and how does that show up in my learning environment/knowledge workplace (see also Growth Mindset by Carol Dweck, Open Mindset by Gary Hamel)?</li>
+<li><strong>Skillset</strong> - how good are my competencies and skills related to learning (see also (<a href="http://www.p21.org/our-work/p21-framework">Framework for 21st Century Learning</a>, <a href="https://ec.europa.eu/jrc/en/publication/eur-scientific-and-technical-research-reports/digcomp-21-digital-competence-framework-citizens-eight-proficiency-levels-and-examples-use">DigiComp 2.1 Framework</a>)?</li>
+<li><strong>Toolset</strong> - Am I using contemporary tools, methods, and formats in my learning and work processes (see also <a href="https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html">Web 2.0</a>, <a href="https://de.wikipedia.org/wiki/Agilit%C3%A4t_(Management)">Agile Methods</a>)?</li>
+</ul>
+<figure>
+<img src="./images/lernOS-Wheel.png" alt="lernOS Wheel" /><figcaption aria-hidden="true">lernOS Wheel</figcaption>
+</figure>
+<p>Your <strong>lernOS Workplace</strong> is a very individual matter, you should design it according to your needs. Usually this place is not only in one place, but in several places. For students this can be e.g. the school and their own room. In times of distributed and mobile work, any place can be your learning and working place.</p>
+<p>With the following template based on the <a href="https://jarche.com/2014/02/the-seek-sense-share-framework/">Seek&gt;Sense&gt;Share Frameworks</a> by Harold Jarche you can describe your current lernOS Workplace, share your thoughts about it and develop ideas for the future:</p>
+<figure>
+<img src="./images/lernOS-Workplace.png" alt="lernOS Workplace" /><figcaption aria-hidden="true">lernOS Workplace</figcaption>
+</figure>
+<p>This is also true for the digital part of the personal learning environment: all learners need to choose and set up appropriate tools. The following table shows examples of internal (intranet) and external (internet) tool examples for each category of the lernOS Workplace:</p>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool Category</th>
+<th>Description</th>
+<th>Examples Internet</th>
+<th>Examples Intranet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Search</strong></td>
+<td></td>
+<td>Bing, DuckDuckGo, Google</td>
+<td>Microsoft Search</td>
+</tr>
+<tr class="even">
+<td><strong>Browser</strong></td>
+<td></td>
+<td>Chrome, Edge, Firefox</td>
+<td>Chrome, Edge, Firefox</td>
+</tr>
+<tr class="odd">
+<td><strong>Feedreader</strong></td>
+<td>Subscribe and receive news in RSS or ATOM format</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Podcatcher</strong></td>
+<td>Subscribe, receive and listen to podcasts</td>
+<td>Apple Podcasts App, Castro, Overcast</td>
+<td>Microsoft Stream</td>
+</tr>
+<tr class="odd">
+<td><strong>Digital Notebook</strong></td>
+<td>Manage personal digital notes</td>
+<td>Evernote</td>
+<td>OneNote, Joplin</td>
+</tr>
+<tr class="even">
+<td><strong>Wiki</strong></td>
+<td></td>
+<td>Wikipedia, Fandom</td>
+<td>Confluence, DokuWiki, MediaWiki</td>
+</tr>
+<tr class="odd">
+<td><strong>Office Package</strong></td>
+<td></td>
+<td>G Suite, Collabra</td>
+<td>Office 365, Libre Office</td>
+</tr>
+<tr class="even">
+<td><strong>Video Conferencing Software</strong></td>
+<td>Conducting Audio and Video Conferences</td>
+<td>Jitsi, Google Hangouts Meet, Skype</td>
+<td>Zoom, GoToMeeting, Microsoft Teams, Skype for Business, WebEx, BlueJeans</td>
+</tr>
+<tr class="odd">
+<td><strong>Mindmap Software &amp; Outliner</strong></td>
+<td>Creation and editing of hierarchical topic structures</td>
+<td>Mindmeister</td>
+<td>XMind, MindManager, Freemind, Freeplane</td>
+</tr>
+<tr class="even">
+<td><strong>Website</strong></td>
+<td></td>
+<td>Jimdo, Squarespace, Wordpress</td>
+<td>SharePoint Online, Confluence</td>
+</tr>
+<tr class="odd">
+<td><strong>Weblog</strong></td>
+<td>Writing and publishing blog posts</td>
+<td>Wordpress, Medium, LinkedIn (articles), Tumblr</td>
+<td>HCL Connections, Jive, Yammer</td>
+</tr>
+<tr class="even">
+<td><strong>Podcast and Video Blog Platform</strong></td>
+<td>Upload and Publish Audio and Video Blogs (vlogs)</td>
+<td>YouTube, Vimeo, Podigee, Podcast Platform, Wordpress + Podlove</td>
+<td>Microsoft Stream, Kaltura, Vimp</td>
+</tr>
+<tr class="odd">
+<td><strong>Filesharing</strong></td>
+<td>Organize files in folders</td>
+<td>Dropbox, Google Drive</td>
+<td>OneDrive, SharePoint Online, Nextcloud</td>
+</tr>
+<tr class="even">
+<td><strong>Social Networks &amp; Online Forums</strong></td>
+<td>Maintain Online Profile, Write Status Messages, Network with Others</td>
+<td>LinkedIn, Twitter, Workplace by Facebook, Xing, ResearchGate, Reddit, Stackoverflow</td>
+<td>Yammer, HCL Connections, Jive, Discourse</td>
+</tr>
+<tr class="odd">
+<td><strong>Chat</strong></td>
+<td>Write short messages, create chat groups</td>
+<td>WhatsApp, Telegram, Signal, Threema, WeChat</td>
+<td>Microsoft Teams, Kaizala, Slack, Mastodon, Threema, Mattermost, Rocket.Chat</td>
+</tr>
+<tr class="even">
+<td><strong>Personal Information Manager &amp; Email</strong></td>
+<td>Manage email, calendar, contacts etc.</td>
+<td>Gmail</td>
+<td>Outlook</td>
+</tr>
+<tr class="odd">
+<td><strong>Task and Time Management</strong></td>
+<td>Planning and keeping time for tasks</td>
+<td>Trello, Todoist, Things, Omnifocus</td>
+<td>Microsoft ToDo</td>
+</tr>
+<tr class="even">
+<td><strong>Reference Manager</strong></td>
+<td>Link and Literature Management</td>
+<td>Zotero, Mendeley, Liquidtext</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="lernos-memex---the-2nd-brain-of-the-learners">lernOS Memex - The “2nd Brain” Of The Learners</h2>
+<p>Individual knowledge and learning environments can be just as individual as people are individual. The idea of lernOS Memex aims to create a common reference point here. Memex stands for “Memory Extender” and can be understood as a digital twin of one’s own brain, also called “second brain” in English.</p>
+<p>The Memex in lernOS is a system that the user trusts and which, in addition to all the organizational and planning elements of lernOS, also contains references and descriptions to all other systems used in lernOS practice.</p>
+<p>Theoretically, the Memex can also be implemented in analog form, e.g., in the form of a notebook. In practice, however, digital notebooks or scratchpads are mostly used (e.g. OneNote, Evernote), as they offer many advantages over analog variants. For example, they offer unlimited space, can be searched, and contain audio and video content.</p>
+<figure>
+<img src="./images/lernOS-Memex-Example-OneNote.png" alt="Example of a lernOS Memex in Microsoft OneNote by Simon Dückert" /><figcaption aria-hidden="true">Example of a lernOS Memex in Microsoft OneNote by Simon Dückert</figcaption>
+</figure>
+<h1 id="learning-paths">Learning Paths</h1>
+<p>A lernOS learning path is a set of exercises (katas) that you use to learn new skills and develop a new mindset over time. A learning path can be completed within a lernOS Sprint.</p>
+<h2 id="learning-path-productivity-stress-free">Learning Path Productivity &amp; Stress-Free</h2>
+<p>In this learning path you will learn to organize complex knowledge work yourself and to face the daily flood of information without stress. Many people face the problem of sinking into the hamster wheel of daily and routine activities and having no time for important tasks.</p>
+<p>The Productivity &amp; Stress-Free Learning Path is based on David Allen’s <a href="https://gettingthingsdone.com">Getting Things Done</a> (GTD) method. By learning the rules and principles step by step, and practicing them in the katas, you will build your own GTD system in this lernOS Sprint.</p>
+<p>Getting Things Done is, at its core, about getting all the tasks and ideas out of your head and into a system you trust (David Allen: “Mind like Water”). You collect the “stuff” that comes rushing at you every day in one or more inboxes. These are regularly processed in a five-step process. To keep the system up to date, weekly (Weekly Review) and daily reviews (Daily Review) are carried out.</p>
+<figure>
+<img src="./images/lernOS-GTD.png" alt="GTD Workflow according to David Allen, own illustration" /><figcaption aria-hidden="true">GTD Workflow according to David Allen, own illustration</figcaption>
+</figure>
+<p>You can use the katas in this learning path to learn how to learn and work productively and stress-free in a sprint:</p>
+<ol type="1">
+<li><strong>Kata:</strong> Top 10 resources on GTD.</li>
+<li><strong>Kata:</strong> Gathering stuff and sweeping the mind</li>
+<li><strong>Kata:</strong> Set up your GTD environment</li>
+<li><strong>Kata:</strong> Which inbox(es) do you want to use?</li>
+<li><strong>Kata:</strong> What lists do you want to create and keep?</li>
+<li><strong>Kata:</strong> Inbox Zero in 4 steps</li>
+<li><strong>Kata:</strong> Set up your project environment</li>
+<li><strong>Kata:</strong> Create your reference file</li>
+<li><strong>Kata:</strong> Do a Weekly Review</li>
+<li><strong>Kata:</strong> Do a Daily Review</li>
+<li><strong>Kata:</strong> The 6 Focus Horizons of Getting Things Done</li>
+</ol>
+<h3 id="top-10-sources-on-gtd-kata">Top 10 Sources on GTD (Kata)</h3>
+<p>The basics of GTD are documented in many places on the internet &amp; in the literature. In this kata, familiarize yourself with the basics of GTD and create an environment that puts you in an optimal situation. This environment is based on the three pillars of time, place and tools.</p>
+<p><strong>Step 1:</strong></p>
+<p>Below I have compiled some resources that you can use to familiarize yourself with the method. Pick at least three materials from the following list and learn the basics of GTD:</p>
+<ol type="1">
+<li>Talk <a href="https://www.youtube.com/watch?v=kOSFxKaqOm4">Getting in control and creating space</a> by David Allen at TEDx Amsterdam.</li>
+<li>Understanding the GTD best practices - chapter in one of David Allen’s GTD setup guides (e.g., <a href="https://gettingthingsdone.com/wp-content/uploads/2020/12/GTD_Microsoft_To_Do_LTR_sample.pdf">Getting Things Done Setup Guide for Microsoft To Do</a></li>
+<li>Website <a href="https://gettingthingsdone.com/">gettingthingsdone.com</a> - official website of David Allen with many materials in the <a href="https://gettingthingsdone.com/resources/">blog and podcast</a></li>
+<li>Wikipedia article <a href="https://en.wikipedia.org/wiki/Getting_Things_Done">Getting Things Done</a> 5th article <a href="http://pespmc1.vub.ac.be/Papers/GTD-cognition.pdf">Getting Things Done: The Science behind Stress-Free Productivity</a></li>
+<li>Subreddit <a href="https://www.reddit.com/r/gtd/">Getting Things Done</a> on reddit</li>
+<li>8th Video <a href="https://www.youtube.com/watch?v=gCswMsONkwY">GTD - Animated Book Summary And Review</a> on YouTube.</li>
+<li>playlist <a href="https://www.youtube.com/watch?v=AMSXDIo2daE&amp;list=PLVKNjykg9ryZH-QvGVBIaSTq25ynoh1Qu">GTD with Rosa</a> on YouTube</li>
+<li>podcast episode <a href="https://www.podchaser.com/podcasts/the-tim-ferriss-show-87589/episodes/384-david-allen-the-art-of-get-44321188">David Allen - The Art of Getting Things Done</a> on the Tim Ferris Show</li>
+</ol>
+<p>Make sure you have internalized the <a href="https://gettingthingsdone.com/what-is-gtd/">Five Steps of Getting Things Done</a>:</p>
+<ul>
+<li><strong>STEP 1 GATHER - Gather everything that has your attention</strong>. Write, draw or collect everything that catches your attention in a tool or on paper.</li>
+<li><strong>STEP 2 CLARIFY - Process what it means</strong>. Is it actionable? If so, decide on the next action and project (if more than one action is needed). If not, decide if it is trash, reference, or something to put on hold.</li>
+<li><strong>STEP 3 ORGANIZE - Put it where it belongs</strong>. Create reminders about the content in appropriate places.</li>
+<li><strong>STEP 4 REFLECT - Review Frequently</strong>. Update and review all relevant system content to regain control and focus.</li>
+<li><strong>STEP 5 ACTIVATE - Just Do</strong>. Use your trusted system to make action decisions with confidence and clarity.</li>
+</ul>
+<p><strong>Step 2:</strong></p>
+<p>Decide how you want to use your GTD system:</p>
+<ol type="1">
+<li>professional</li>
+<li>private</li>
+<li>professional and private</li>
+</ol>
+<p><strong>Step 3:</strong></p>
+<p>Consider which of the artifacts of GTD you already use today and document them. In case of professional and private use, the documentation has to be done twice.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Artifact</th>
+<th>Professional</th>
+<th>Private</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inbox(es)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Calendar</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Next Steps</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Wait for</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>reference file</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Someday/maybe</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>projects</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Project Site</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 4:</strong></p>
+<p>Gather the working tools you want to use in your GTD system. To do this, look at the list of <em>The Basic Processing Tools</em> in the <a href="https://gettingthingsdone.com/wp-content/uploads/2014/10/PDF_1st_edition_GTD_audiobook.pdf">Accompanying Material to the GTD Audiobook</a> and write down what other material you need.</p>
+<p><strong>Additional Information:</strong></p>
+<ul>
+<li>Book <a href="https://amzn.to/3z1kMVC">Getting Things Done: The Art of Stress-free Productivity</a> or <a href="https://amzn.to/3g4woP2">How I Get Things Done: Self-Management for Everyday Life</a> by David Allen</li>
+<li>Book <a href="https://amzn.to/3fIXCfc">The Getting Things Done Workbook: 10 Moves to Stress-Free Productivity</a> by David Allen</li>
+</ul>
+<h3 id="gathering-stuff-and-sweeping-the-mind-kata">Gathering Stuff and Sweeping the Mind (Kata)</h3>
+<p>In this kata you will develop a sense of where “stuff” is gathering in your physical environment that you will later need to incorporate into your organizational system. You probably also carry a lot of stuff around in your head and new stuff is constantly being added. These loose ends weigh you down and prevent you from fully focusing on an activity. You will move these things out of your head and into a system you trust.</p>
+<p><strong>Step 1:</strong></p>
+<p>Take a thorough look around your physical and virtual workspace and write down where “stuff” is accumulating that you need to process. Try to collect all “stuff” in an inbox (e.g., a folder, a binder). The places can be, for example:</p>
+<ul>
+<li>Piles of paper</li>
+<li>Things in your pocket or backpack</li>
+<li>Sticky notes and reminders</li>
+<li>To-do lists and checklists</li>
+<li>Folders and binders</li>
+<li>Notebooks</li>
+<li>Purse or handbag</li>
+<li>Letters and bills</li>
+<li>Inbox (maybe faxes?)</li>
+</ul>
+<p><strong>Step 2:</strong></p>
+<p>Another physical place with “stuff” is your head. With a so-called “mind sweep” you can bring everything from your head into a system you trust. To do this, write down <strong>everything</strong> that is on your mind. What needs to be done now and in the near future? What needs to be initiated now? Who needs to be called? Create one note per idea or task, whether electronic or on paper. Mass counts in this exercise. Don’t stop until nothing comes.</p>
+<p><strong>Step 3:</strong></p>
+<p>Use David Allen’s <a href="https://gettingthingsdone.com/wp-content/uploads/2014/10/Mind_Sweep_Trigger_List.pdf">Incompletion Trigger List</a> to get more things out of your head and into your system, such as:</p>
+<ul>
+<li>Projects</li>
+<li>Articles or books to write</li>
+<li>Financial topics</li>
+<li>Plans</li>
+<li>Administrative</li>
+<li>IT systems</li>
+<li>Meetings</li>
+<li>Further education</li>
+<li>and much more.</li>
+</ul>
+<p><strong>Advanced Information:</strong></p>
+<ul>
+<li>Video <a href="https://gettingthingsdone.com/insights/capture-into-your-in-tray">Capture in your In-tray</a> with David Allen</li>
+<li>Chapter <em>Move 1: Capture All Your Incoming Paper into One In-tray</em> in the <a href="https://amzn.to/3wXiftE">Getting Things Done Workbook</a> by David Allen</li>
+</ul>
+<h3 id="set-up-your-gtd-environment-kata">Set Up Your GTD Environment (Kata)</h3>
+<p>In this kata, you will set up a first version of your GTD environment. The environment is not static, but constantly adapts to your needs or new opportunities.</p>
+<p><strong>Step 1:</strong></p>
+<p>Use the table to determine which tools and utilities you want to use for individual artifacts (visible results of your system). Document these e.g. in your lernOS Memex.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Artifact</th>
+<th>Tool or Aid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Calendar</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Next Steps</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Wait for</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>reference file</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Someday/Maybe</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>projects</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>project plans</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2:</strong></p>
+<p>Use the following checklist to complete the table:</p>
+<ul>
+<li>Do you have different physical and digital calendars?</li>
+<li>What task management tools do you use? What lists do you keep there? Are there other tools you use with colleagues or in your team?</li>
+<li>Where do you organize and document your projects?</li>
+<li>Have you thought about all reference repositories (files, contacts, wiki, links, literature)?</li>
+<li>What (digital) notebooks do you have? Do you use one of them as memex or 2nd brain?</li>
+</ul>
+<p><strong>Step 3:</strong></p>
+<p>Set up your GTD environment according to the previous considerations. Make sure that all information is accessible to you as barrier-free as possible at any place and at any time.</p>
+<h3 id="which-inboxes-do-you-want-to-use-kata">Which Inbox(es) Do You Want To Use? (Kata)</h3>
+<p>In this kata, you’ll get an overview of the inboxes you want to keep track of. Since this can quickly become a lot, you will apply the laws of simplicity to make your inbox system as simple as possible.</p>
+<p><strong>Step 1:</strong></p>
+<p>Use the following checklist to get an overview of your inboxes. Document all inboxes in a list (e.g., in lernOS Memex).</p>
+<ul>
+<li>What physical inboxes do you have (letters, mailbox, backpack/bag, folders, etc.)?</li>
+<li>Have you thought of all the email inboxes?</li>
+<li>Do you have other inboxes on social media (e.g., personal messages on social media).</li>
+<li>Do you use chat/messengers that need to be considered as inboxes?</li>
+<li>Do you use the bookmark or save function in social networks to save content for later (e.g. in LinkedIn, Twitter, Slack, Teams or SharePoint)?</li>
+<li>Do you use special bookmarking or reading list tools such as Pocket or Read it Later?</li>
+<li>Do you have one or more folders on your computer that serve as an inbox (e.g., collection of documents you want to read later)?</li>
+<li>Do you use your browser’s bookmark feature to bookmark content for later?</li>
+</ul>
+<p><strong>Step 2:</strong></p>
+<p>In the digital world, an overwhelming number of inboxes can quickly accumulate. Now use John Maeda’s <a href="http://lawsofsimplicity.com/">10 Laws of Simplicity</a> to find approaches to simplify your “inbox jungle.”</p>
+<ul>
+<li><strong>Law 1 REDUCE:</strong> The simplest way to achieve simplicity is thoughtful reduction.</li>
+<li><strong>Law 2 ORGANIZE:</strong> Organization makes a system appear more manageable.</li>
+<li><strong>Law 3 TIME:</strong> Saving time feels like simplicity.</li>
+<li><strong>Law 4 LEARN:</strong> Knowledge makes everything easier.</li>
+<li><strong>Law 5 DIFFERENCES:</strong> Simplicity and complexity need each other.</li>
+<li><strong>Law 6 CONTEXT:</strong> What is peripheral to simplicity is definitely not peripheral.</li>
+<li><strong>Law 7 EMOTION:</strong> More emotions are better than few.</li>
+<li><strong>Law 8 TRUST:</strong> We trust in simplicity.</li>
+<li><strong>Law 9 ERRORS:</strong> Some things can never be made simple.</li>
+<li><strong>Law 10 THE ONE:</strong> Simplicity is about subtracting the obvious and adding the meaningful.</li>
+</ul>
+<h3 id="what-lists-do-you-want-to-create-and-maintain-kata">What Lists Do You Want To Create And Maintain? (Kata)</h3>
+<p>In this kata, you’ll delve a little deeper into each of GTD’s list types and decide which of them you want to use.</p>
+<p><strong>Step 1:</strong></p>
+<p>In the Getting Things Done Workbook, David Allen describes the following list types that he recommends for getting started with Getting Things Done. Look through the list and consider which lists you want to create and keep:</p>
+<ul>
+<li><strong>Next Action List</strong> - a “Next Action” is the next physical and visible step that moves something toward completion.</li>
+<li><strong>Someday/Maybe List</strong> - list of things and issues you may want to address at a later date. <strong>Waiting for list</strong> - a list to keep track of things that need to be done by others</li>
+<li><strong>Project List</strong> - a list of all ongoing projects that need more than one step for completion <strong>Project Next Action Lists</strong> - a list per project that contains the next steps for that project.</li>
+</ul>
+<p>If you need more lists, just add to the list.</p>
+<p><strong>Step 2:</strong></p>
+<p>For each list you need to keep, think about where and how you want to create it and document your approach (e.g. in the lernOS Memex). Now create all lists.</p>
+<p><strong>Example:</strong> The following screenshot shows the management of GTD lists in Microsoft To Do:</p>
+<figure>
+<img src="./images/gtd-example-lists-in-to-do.png" alt="GTD Lists in Microsoft To Do by Simon Dückert" /><figcaption aria-hidden="true">GTD Lists in Microsoft To Do by Simon Dückert</figcaption>
+</figure>
+<p><strong>Additional Information:</strong></p>
+<ul>
+<li>Video <a href="https://gettingthingsdone.com/insights/next-action-list">Next action list</a> with David Allen</li>
+<li><a href="https://gettingthingsdone.com/wp-content/uploads/2020/12/GTD_Microsoft_To_Do_A4_sample.pdf">GTD Setup Guide for Microsoft To Do</a> by David Allen</li>
+</ul>
+<h3 id="inbox-zero-in-4-steps-kata">Inbox Zero in 4 Steps (Kata)</h3>
+<p>In this kata, you’ll apply steps 2 and 3 of Getting Things Done to empty your inbox(es) and transfer everything to your organizational system. After that, you can be sure you haven’t forgotten anything. Only then can you fully concentrate on the tasks at hand.</p>
+<p><strong>Step 1:</strong></p>
+<p>Open your inbox and work in a focused way through all the elements, such as emails, appointment acceptances, tweets, likes, feedback, callbacks, etc.). Ask yourself the question “What is it?” about each item.</p>
+<p><strong>Step 2:</strong></p>
+<p>Now ask yourself if you need to do something about the selected element or not.</p>
+<p><strong>Step 3:</strong></p>
+<p>If you don’t need to do anything about the selected item, you have the following options:</p>
+<ul>
+<li>Delete it, if you don’t need it in the future.</li>
+<li>Store in reference material if you need to access it quickly in the future</li>
+<li>File in Someday/Maybe, if you want to revisit the item at a later date.</li>
+</ul>
+<p><strong>Step 4:</strong></p>
+<p>If you need to do something about the selected item, here are the options:</p>
+<ul>
+<li>2-minute rule: if it takes less than 2 minutes to do, do it right away, if not:</li>
+<li>Delegate: check if you need to do the activity yourself or can delegate it to someone else, if not:</li>
+<li>Add activity to the Next Steps list if it needs to be done at the next possible time, or</li>
+<li>add the activity to the calendar, if it should be done at a certain time or</li>
+</ul>
+<p><strong>Additional Information:</strong></p>
+<ul>
+<li>Chapter “Move 4” in David Allen’s Getting Things Done Workbook.</li>
+</ul>
+<h3 id="set-up-your-project-environment-kata">Set Up Your Project Environment (Kata)</h3>
+<p>In GTD, projects are anything that <strong>requires more than one work step</strong> AND is to be completed within a year. Projects are more complex tasks that run sequentially or in parallel. Therefore, it is important to always have an overview of ongoing and upcoming projects and to be able to draw on experience from past projects.</p>
+<p><strong>Step 1:</strong></p>
+<p>If you haven’t yet decided which tools to use for mapping projects, do so now. It is recommended to use one tool for textual documentation of projects (e.g. Evernote, Obsidian, OneNote) and one for task management (e.g. Todoist, MS To Do).</p>
+<p><strong>ProTip:</strong> if you have a lernOS Memex, use it for project documentation.</p>
+<p><strong>Step 2:</strong></p>
+<p>Create an overview of all your running projects in the project documentation. If you like, you can also list later starting and already finished projects.</p>
+<p><strong>ProTip:</strong> David Allen recommends that when naming projects, always use a meaningful verb that describes the activity to achieve the desired result.</p>
+<p><strong>Step 3:</strong></p>
+<p>Create a page (1-pager) for each ongoing project with key information about the project. This could include goals, people involved, links to resources and documents, process of the project, etc.</p>
+<p><strong>ProTip:</strong> For simplification, I recommend you to create a template for projects, which you can use again and again.</p>
+<p><strong>Step 4:</strong></p>
+<p>For each project, create a list of the next steps in the project (project plan). Enter all the steps that are necessary to successfully complete the project there. The list of activities in the project does not have to be maintained in the same tool as the project documentation. Combinations such as Obsidian + Todoist or OneNote + MS To Do are recommended.</p>
+<p><strong>Further information:</strong></p>
+<ul>
+<li>Chapter <em>Move 7</em> David Allen’s Getting Things Done Workbook.</li>
+</ul>
+<h3 id="create-your-reference-repository-kata">Create Your Reference Repository (Kata)</h3>
+<p>In this kata, you determine which tools you will use as reference files, create them and define a basic structure. The reference file is where you store all your reference material for quick access.</p>
+<p><strong>Step 1:</strong></p>
+<p>Determine which tool or tools you want to use for your reference file. The following questions will help you do this:</p>
+<ol type="1">
+<li>what kind of content do I need to store in my reference file?</li>
+<li>is structuring in folders/subfolders enough for me or do I also need categories/keywords?</li>
+<li>do only I access my reference filing or should the filing be accessible to others in whole or in parts?</li>
+<li>do i need to be able to search the reference file?</li>
+<li>do I need DeepL access to access selected content very quickly?</li>
+</ol>
+<p><strong>ProTip:</strong> use the meme SMAC (social, mobile, analytics, cloud) to select tools for reference filing. Examples: social: content can be made available to others; mobile: content is available on mobile devices; analytics: frequently used content is displayed preferentially; cloud: content is stored (securely) in the cloud for convenient access from multiple devices.</p>
+<p><strong>Step 2:</strong></p>
+<p>Think about which content topics should be mapped in your reference repository. These will form the entry points (navigation) into your reference file. Some examples of typical topics:</p>
+<ul>
+<li>Administration</li>
+<li>Work resources</li>
+<li>Activities/Tasks</li>
+<li>Images</li>
+<li>Contacts</li>
+<li>Bookmarks/Favorites</li>
+<li>music</li>
+<li>Network</li>
+<li>Organizations</li>
+<li>Passwords</li>
+<li>Projects</li>
+<li>Strategy</li>
+<li>Events</li>
+<li>videos</li>
+<li>Knowledge areas/topics</li>
+</ul>
+<p><strong>Step 3:</strong></p>
+<p>Use the results from the previous steps to create your reference repository or adapt the existing structure. Test the repository in the coming weeks and continuously improve structure and functionality.</p>
+<p><strong>ProTip:</strong> document your reference filing on a page in your lernOS Memex.</p>
+<p><strong>Advanced Information:</strong></p>
+<ul>
+<li>Chapter <em>Move 8</em> in David Allen’s Getting Things Done Workbook</li>
+</ul>
+<h3 id="make-a-weekly-review-kata">Make a Weekly Review (Kata)</h3>
+<p>In this kata, you set the time, place and schedule for your weekly review. The purpose of the Weekly Review is to review the past week and the next weeks and to bring your organizational system up to date.</p>
+<p><strong>Step 1:</strong></p>
+<p>Determine when and where you want to do your Weekly (1-2 hours should be enough). Put the weekly in your calendar as a recurring appointment. Choose a time when you have time and energy. Also, the weekly should be at a time that is rarely needed by other events.</p>
+<p><strong>ProTip:</strong> To make the Weekly Review as enjoyable as possible, associate it with things that are pleasant and fun for you. E.g. your favorite drink, favorite place, favorite music or your favorite time.</p>
+<p><strong>Step 2:</strong></p>
+<p>Play through the weekly review once for the last week. Use the <a href="https://gettingthingsdone.com/wp-content/uploads/2014/10/Weekly_Review_Checklist.pdf">GTD Weekly Review Checklist</a> by David Allen to create your own checklist. It might look like this:</p>
+<ol type="1">
+<li>put <strong>everything</strong> in the inbox that you haven’t already put there.</li>
+<li>empty the inbox</li>
+<li>review <strong>next steps</strong>.</li>
+<li>look through the calendar of the last week (are there any ToDo’s for you?)</li>
+<li>check the calendar of the next weeks (are there any to-dos for you to prepare?)</li>
+<li>check the <strong>wait for list</strong>.</li>
+<li>review <strong>projects-list</strong></li>
+<li><strong>Mind-Sweep</strong>.</li>
+</ol>
+<p><strong>ProTip:</strong> document your Weekly Review Checklist in the lernOS Memex that you always have on hand and can easily adjust.</p>
+<p><strong>Advanced Information:</strong></p>
+<ul>
+<li>Chapter Move 9 David Allen’s Getting Things Done Workbook.</li>
+</ul>
+<h3 id="do-a-daily-review-kata">Do A Daily Review (Kata)</h3>
+<p>Often a weekly review is not enough to be able to react quickly enough to all new developments. In this Kata you will learn what a Daily Review is and decide if and when you want to do such dailies with yourself.</p>
+<p><strong>Step 1:</strong></p>
+<p>Consider for yourself if your daily life is so fast-paced that a Weekly is not enough for you to organize and you would like to do an additional Daily Review. If so, think about how long and when the Daily could be. A Daily does not have to be at the same time every day.</p>
+<p><strong>ProTip:</strong> if you use the 60-20-20 minute rule of time management (schedule 60% of the day, 20% for social activities, 20% for contingencies), you will always have enough time for a Daily.</p>
+<p><strong>Step 2:</strong></p>
+<p>Complete the following steps for your Daily Review:</p>
+<ul>
+<li><strong>Calendar:</strong> check if all tasks are done for the day’s appointments.</li>
+<li><strong>Emergency scan:</strong> check if any new items have been added to your inboxes that you need to take care of immediately</li>
+<li><strong>Check lists:</strong> check your next steps list and project lists to see if anything needs to be done today</li>
+<li><strong>Inbox zero:</strong> if you have time, work through the items in your inboxes. This will save you a lot of time later in the Weekly.</li>
+</ul>
+<p><strong>Advanced Information:</strong></p>
+<ul>
+<li>Chapter Move 10 in David Allen’s Getting Things Done Workbook.</li>
+</ul>
+<h3 id="the-6-focus-horizons-of-getting-things-done-kata">The 6 Focus Horizons Of Getting Things Done (Kata)</h3>
+<p>Many equate Getting Things Done with organizing daily tasks. However, with the 6 Focus Horizons, there is also a structured approach to planning larger periods of time up to the meaning of life. In this kata, you will learn about the 6 focus horizons and schedule necessary appointments for them. The 6 focus horizons should be thought through at least once a quarter, half year or year (Quarterly, Yearly).</p>
+<p><strong>Step 1:</strong></p>
+<p>Familiarize yourself with the 6 focus horizons (Source: <a href="https://gettingthingsdone.com/wp-content/uploads/2014/10/2016-Levels-of-Your-Work.pdf">The Altitude Map</a> by David Allen):</p>
+<ul>
+<li><strong>HORIZONT 0/GROUND - Calendar/Actions:</strong> The next physical, visible actions to be taken for a project or other deliverable; each individual action to be taken for anything.</li>
+<li><strong>HORIZONT 1 - Projects:</strong> Outcomes we want to achieve that require more than one action and can be completed within a year.</li>
+<li><strong>HORIZONT 2 - Areas of Responsibility:</strong> Key areas of work and life that need to be maintained on standards to “keep the engines running.”</li>
+<li><strong>HORIZONT 3 - Goals and Objectives:</strong> What specifically do we want and need to accomplish within the next 12 to 24 months to achieve the vision?</li>
+<li><strong>HORIZONT 4 - Vision:</strong> How it will look, sound, feel when successfully implemented. Long-term results and ideal scenarios.</li>
+<li><strong>HORIZONT 5 - Purpose and Principles:</strong> The ultimate intent for something and the benchmarks for its success. Why do we do it? What are the critical behaviors?</li>
+</ul>
+<p>Use the Getting Things Done book or one of the following sources for this:</p>
+<ul>
+<li>Blog <a href="https://gettingthingsdone.com/2011/01/the-6-horizons-of-focus">The 6 Horizons of Focus</a> by David Allen</li>
+<li>Article <a href="https://gettingthingsdone.com/wp-content/uploads/2014/10/2016-Levels-of-Your-Work.pdf">The Altitude Map</a> by David Allen</li>
+<li><a href="https://i.redd.it/e8j47hceq4l41.jpg">GTD Workflow Map</a> by David Allen</li>
+</ul>
+<p><strong>Step 2:</strong></p>
+<p>Think about how often and on which date you want to deal with the horizons 2-5 (at least 1x per year). And put the dates in your calendar as a recurring appointment.</p>
+<p><strong>Step 3:</strong></p>
+<p>Using the sources above, think about the questions you want to ask in your Quarterly or Yearly and how you want to document the results. Create a checklist for Quarterly/Yearly (e.g., with the other checklists in your lernOS Memex).</p>
+<p><strong>ProTip:</strong> the <em>Past Forward</em> format from Week 0 is great for developing an idea for your vision.</p>
+<p><strong>ProTip:</strong> the results from Horizon 5 “Purpose and Principles” reflections can be documented in the center of the lernOS for You Canvas.</p>
+<p><strong>Advanced Information:</strong></p>
+<ul>
+<li>Video <a href="https://www.youtube.com/watch?v=k18K_8T_eHU">Areas of Focus, Responsibility and Interests</a> with David Allen.</li>
+</ul>
+<h1 id="appendix">Appendix</h1>
+<h2 id="circle-facilitation-checklist">Circle Facilitation Checklist</h2>
+<p>When learning in the Circle, the Circle facilitation checklist helps facilitators organize the Circle in a structured way. You can decide in week 0 if one person will coordinate the whole sprint or if you want to rotate the role. It is best to copy the checklist to a place where all Circle members have access to it (e.g. OneNote, Etherpad, OneDrive, Dropbox).</p>
+<p><strong>Week 0 - Sprint Planning &amp; Get Together</strong></p>
+<p>If you don’t know each other in the Circle yet, get to know each other in Week 0. Plan when you will meet, what tools you will use and and who the moderator will be.</p>
+<ul>
+<li><strong>Check-in:</strong> Welcome! <em>(5 minutes)</em></li>
+<li><strong>Get together:</strong> Who are you? Introduce yourself. Five-minute timebox per Circle member. <em>(25 minutes)</em></li>
+<li><strong>Sprint planning</strong> see below <em>(25 minutes)</em>.</li>
+<li><strong>Check-out:</strong> Confirm next meeting. <em>(5 minutes)</em></li>
+</ul>
+<p>Define a Circle facilitator to handle event and time management. One of the biggest obstacles to successful Circle is discipline and time management. The facilitator is not the “boss” of the Circle, but a regular Circle member who makes sure things run smoothly. Determine what learning path you will use. Define the day and time of the weekly meeting. Define whether you will meet in person or virtually. Define the tools you will use for communication and documentation in the Circle. Decide which of the suggested exercises you will do in the Circle. Also decide if you want to use the lernOS Canvas (see chapter lernOS Canvas) as a supporting tool.</p>
+<ul>
+<li><strong>Circle Moderator:</strong> Fixed / Rotating.</li>
+<li><strong>Day and time of Weekly:</strong> …</li>
+<li><strong>Weekly meetings are:</strong> In person / Virtual.</li>
+<li><strong>Flipped Classroom Approach:</strong> Yes / No.</li>
+<li><strong>Tools used (can everyone use them?):</strong> …</li>
+<li><strong>Do we use Canvas:</strong> Yes / No.</li>
+</ul>
+<p><strong>ProTip:</strong> everyone should do the “Past Forward” and “Thinking Visually with the lernOS Canvas” katas in week 0 to find the right goals for the lernOS Sprint.</p>
+<p><strong>ProTip:</strong> in many cases the time to do the exercises in the Weekly is too short. Therefore use the method <a href="https://en.wikipedia.org/wiki/Flipped_classroom">Flipped Classroom</a>: each Circle member prepares the exercises as “homework”, so you have more time in the Weekly to discuss the results.</p>
+<p><strong>ProTip:</strong> if you want to document your Circle in OneNote or use Microsoft Teams for the Circle, have a look at the <a href="https://github.com/cogneon/lernos-core/tree/master/lernOS%20Circle%20Template">lernOS Circle Template</a> (available only in German). In it you will find a template for documentation in the Circle.</p>
+<p><strong>ProTip:</strong> If you use the lernOS OneNote Circle Template, you can take a recent photo of your Canvas and paste it so the other Circle members can see it and give feedback.</p>
+<p><strong>WEEK 1</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 2</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 3</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>Week 4 &amp; Pit Stop 1</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me back? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 5</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 6</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 7</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 8 &amp; Pit Stop 2</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me back? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 9</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 10</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me up? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>WEEK 11</strong></p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? What has happened in terms of key results? What’s holding me back? Two-minute timebox per Circle member. <em>(10 minutes)</em></li>
+<li>Talking through the results of the katas in each learning path.</li>
+<li><strong>Check-out:</strong> What will I do between now and the next Weekly? One-minute timebox per Circle member. <em>(5 minutes)</em></li>
+</ul>
+<p><strong>Week 12: Retrospective &amp; Celebration</strong></p>
+<p>This week should be the final iteration of your Key Results. Talk about it and show you in the check-in. You will reflect on the Circle experience and talk about how to sustain the process. After the Weekly, take some time to celebrate your success!</p>
+<ul>
+<li><strong>Check-in:</strong> What have I done since the last check-in? Show the final iteration of the Key Results. Three-minute timebox Per Circle member. <em>(15 minutes)</em></li>
+<li><strong>Your Learning Moments:</strong> Talk about the moments in the Sprint that were special to you. What are your “key learnings?” Consider posting these as a <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9KrufUD9Mu9wstGv8ojfChRwPlq2dVi_kAUB04MuymmzUSg/viewform">lernOS Story</a> for all other practitioners. <em>(20 minutes)</em></li>
+<li><strong>After Action Review:</strong> What was the plan for the sprint? What happened? Was there any deviation? What can be learned from it? <em>(20 minutes)</em></li>
+<li><strong>Check-out:</strong> Are there next steps? Will you stay together for another sprint?</li>
+<li><strong>Party Time!</strong> <em>(You choose the duration)_ </em></li>
+</ul>
+<h2 id="lernos-flow---microsoft-365-edition">lernOS Flow - Microsoft 365 Edition</h2>
+<p>The Office 365 Edition of the lernOS Flow (see Fundamentals) includes suggestions for which tools from the <a href="https://en.wikipedia.org/wiki/Microsoft_365">Microsoft 365</a> ecosystem can be used for each element of the Flow.</p>
+<figure>
+<img src="./images/lernOS-flow-ms-365-edition.png" alt="lernOS Flow - Microsoft 365 Edition" /><figcaption aria-hidden="true">lernOS Flow - Microsoft 365 Edition</figcaption>
+</figure>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>lernOS is inspired by many people and sources and therefore stands <a href="https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants">on the shoulders of giants</a>. I have compiled an overview of the roots and inspirations <a href="https://github.com/cogneon/lernos-core/wiki">in the lernOS Wiki</a>. For this guide, I would like to give special thanks to:</p>
+<ul>
+<li><strong>Hirotaka Takeuchi</strong> and <strong>Ikujiro Nonaka</strong> for introducing the term Scrum to agile innovation methods (1986).</li>
+<li><strong>Jeff Sutherland</strong> and <strong>Ken Schwaber</strong> for defining agile project management in the <a href="https://scrumguides.org">Scrum Guide</a> (2010).</li>
+<li><strong>David Allen</strong> for the <a href="https:/gettingthingsdone.com">Getting Things Done</a> (GTD) method, which shows the way to stress-free productivity for knowledge workers*.</li>
+<li><strong>Andy Grove</strong> for developing the <a href="https://de.wikipedia.org/wiki/Objectives_and_Key_Results">Objectives &amp; Key Results</a> (OKR) method as an evolution of Peter Drucker’s Management by Objectives (MbO) at Intel (1980s). <strong>John Doer</strong> for introducing OKR at Google and <strong>Rick Klau</strong> of Google Ventures for his talk <a href="https://www.youtube.com/watch?v=mJB83EZtAjc">How Google sets goals: OKRs</a> (2013).</li>
+<li><strong>Glyn Moody</strong> (2006) and <strong>Bryce Williams</strong> (2010) for the concept and definition of Working Out Loud as “Observable Work + Narrating Your Work”. <strong>John Stepper</strong> for designing the 12-week WOL learning program documented in the <a href="https:/workingoutloud.com/circle-guides">WOL Circle Guides</a> (2015). <strong>Katharina Krentz</strong> of Bosch for her many contributions to making Working Out Loud useful in organizations.</li>
+<li><strong>Johannes Müller</strong> and <strong>Tobias Müller-Zielke</strong> for the presentations on OKRs and GTD at the lernOS Rockstars Camp 2019 and <strong>Alexander Rose</strong> for putting together the GTD Learning Path.</li>
+</ul>
+<h2 id="change-history.">Change history.</h2>
+<p>All changes to the guide can be found in the <a href="https://github.com/cogneon/lernos-for-you/releases">Release Notes on Github</a>. The sources of all previous guide versions are also available there.</p>
+</body>
+</html>

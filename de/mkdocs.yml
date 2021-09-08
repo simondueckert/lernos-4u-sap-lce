@@ -1,5 +1,5 @@
 site_name: lernOS für Dich Leitfaden
-site_url: https://cogneon.github.io/
+site_url: https://simondueckert.github.io/
 docs_dir: src
 site_dir: ../docs/de
 
@@ -12,7 +12,6 @@ nav:
         - lernOS Workplace: 1-4-lernOS-Workplace.md
         - lernOS Memex: 1-5-lernOS-Memex.md
     - Lernpfade:
-        - Überblick: 2-0-Lernpfade.md
         - Lernpfad Produktivität & Stressfreiheit:
             - Überblick: 2-1-0-Lernpfad-PS.md
             - Top 10 Quellen zu GTD (Kata): 2-1-1-Kata-1.md
@@ -40,8 +39,8 @@ theme:
       logo: material/home
       repo: fontawesome/brands/github
 
-repo_name: 'cogneon/lernos-for-you'
-repo_url: 'https://github.com/cogneon/lernos-for-you'
+repo_name: 'simondueckert/lernos-4u-sap-lce'
+repo_url: 'https://github.com/simondueckert/lernos-4u-sap-lce'
 
 extra:
     homepage: https://lernos.org
@@ -52,4 +51,3 @@ extra:
           link: https://www.linkedin.com/showcase/lern-os
         - icon: fontawesome/brands/github
           link: https://github.com/cogneon
-    disqus: lernos
